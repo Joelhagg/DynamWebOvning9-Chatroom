@@ -1,0 +1,42 @@
+<html>
+
+<head>
+  <title>Express</title>
+  <!-- <link rel="stylesheet" href="/stylesheets/style.css"> -->
+</head>
+
+<body>
+
+  <h1>Välkommen till chatten</h1>
+
+  <br>
+
+  
+  <form action="/room" method="POST">
+    <input placeholder="ny kanal?" name="room" type="text" required>
+    <button type="submit">Skapa nytt chattkanal</button>
+  </form>
+  
+  <br>
+
+    <h3>Öppna chattkanaler</h3>
+
+  <div id="roomContainer">
+    <ul>
+      <% Object.keys(rooms).forEach(room => { %>
+        <!-- <div><%= room %></div>  -->
+      <a href="/<%= room %>"><li><%= room %></li></a>
+      <% }) %> 
+
+    </ul>
+  </div>
+  <br>
+  <br>
+  <br>
+
+
+  <script src="socket.io/socket.io.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>

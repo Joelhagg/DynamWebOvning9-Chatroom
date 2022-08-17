@@ -1,0 +1,23 @@
+<html>
+<head>
+  <title>Chatten</title>
+  <script>
+    const roomName = "<%= roomName %>"
+  </script>
+<script defer src="socket.io/socket.io.js"></script>
+<script defer src="script.js"></script>
+</head>
+
+<body>
+  <a href="./index.ejs"><button>Tillbaka</button></a>
+
+  <div id="messageContainer"></div>
+
+  <form id="sendContainer">
+    <input type="text" id="messageInput">
+    <button type="submit" id="sendButton">Send</button>
+  </form>
+
+</body>
+
+</html>
