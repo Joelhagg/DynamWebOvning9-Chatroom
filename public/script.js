@@ -26,12 +26,9 @@ socket.on("chatMessage", (data) => {
 });
 
 socket.on("roomCreated", (room) => {
-  const roomElement = document.createElement("div");
-  roomElement.innerText = room;
   const roomLink = document.createElement("a");
   roomLink.href = `/${room}`;
-  roomLink.innerText = "Gå med";
-  roomContainer.append(roomElement);
+  roomLink.innerText = `${room}`;
   roomContainer.append(roomLink);
 });
 

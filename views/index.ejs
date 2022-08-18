@@ -2,7 +2,78 @@
 
 <head>
   <title>Express</title>
-  <!-- <link rel="stylesheet" href="/stylesheets/style.css"> -->
+  <meta name="viewport" content="width=device-width">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka&family=Press+Start+2P&display=swap" rel="stylesheet">
+
+  
+  <style>
+
+      body {
+      background: rgb(167,249,255);
+      background: linear-gradient(0deg, rgba(167,249,255,0.5) 0%, rgba(255,167,224,1) 50%);
+      font-family: 'Press Start 2P', cursive;
+      text-align: center;
+      margin: 20px;
+    }
+    
+    h1 {
+      font-size: 40px;
+      margin: 10px;
+    }
+    
+    a {
+      color: black;
+      font-size: x-large;
+      
+    }
+    a:hover {
+      color: rgb(0, 197, 0);
+      text-shadow: 2px 2px 2px rgb(0, 0, 0);
+    }
+    
+    button {
+      background-color: rgb(235, 235, 235);
+      margin: 10px;
+      padding: 10px;
+      font-family: 'Press Start 2P', cursive;
+      font-size: 16px;
+      border: solid black 2px;
+      box-shadow: 4px 4px rgb(118, 118, 118);
+    }
+    button:hover {
+      /* box-shadow: none; */
+      box-shadow: 5px 5px rgb(0, 0, 0);
+    }
+    
+    input {
+      background-color: rgb(235, 235, 235);
+      font-size: 16px;
+      padding: 10px;
+      margin: 10px;
+      font-family: 'Press Start 2P', cursive;
+      border: solid black 2px;
+      box-shadow: 4px 4px rgb(118, 118, 118);
+    }
+
+    ul {
+      list-style-type: none;
+      text-align: center;
+    }
+    
+    li {
+      margin: 20px;
+    }
+
+    @media (max-width: 600px) {
+
+  }
+
+
+  </style>
+
 </head>
 
 <body>
@@ -19,15 +90,17 @@
   
   <br>
 
-    <h3>Öppna chattkanaler</h3>
+    <h2>Öppna chattkanaler</h2>
+
+  <br>
 
   <div id="roomContainer">
     <ul>
       <% Object.keys(rooms).forEach(room => { %>
+        <a href="/<%= room %>"><li><%= room %></li></a>
         <!-- <div><%= room %></div>  -->
-      <a href="/<%= room %>"><li><%= room %></li></a>
-      <% }) %> 
-
+        <% }) %> 
+        
     </ul>
   </div>
   <br>
